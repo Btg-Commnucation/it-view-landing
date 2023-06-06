@@ -1,0 +1,22 @@
+@use "variables" as var;
+
+@mixin flex($justify, $align, $gap: 0, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin responsiveElem(
+  $property,
+  $minSize,
+  $maxSize,
+  $minScreenWidth,
+  $maxScreenWidth
+) {
+  #{$property}: calc(
+    #{$minSize}px + (#{$maxSize} - #{$minSize}) *
+      ((100vw - #{$minWidth}px) / (#{$maxWidth} - #{$minWidth}))
+  );
+}
