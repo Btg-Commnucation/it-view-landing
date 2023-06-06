@@ -1,4 +1,4 @@
-<section class="hero-banner">
+<section id="hero-banner" class="hero-banner">
     <div class="container">
         <div class="hero-banner__content">
             <?php if (have_rows('titre_haut_de_page')) :  ?>

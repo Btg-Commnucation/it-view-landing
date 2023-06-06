@@ -9,6 +9,15 @@ header {
     transform: translateY(100%);
     opacity: 0;
     transition: 1s ease-in-out;
-    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  &.slide-in {
+    img {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    button {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
   }
 }

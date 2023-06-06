@@ -1,4 +1,4 @@
-<section class="solution">
+<section id="solution" class="solution">
     <div class="container">
         <div class="anim-container">
             <h2><?php the_field('titre_solution'); ?></h2>
@@ -18,4 +18,5 @@
             </ul>
         <?php endif; ?>
     </div>
+    <div id="observer-solution"></div>
 </section>

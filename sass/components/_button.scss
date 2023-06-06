@@ -7,9 +7,7 @@ button {
   border-radius: 4.1rem;
   padding: 2.1rem 4.4rem;
   border: 1px solid var.$green;
-  transition: 0.3s ease-in-out;
   transition: 1s ease-in-out;
-  animation: fadeIn 1s ease-in-out forwards;
 
   @include var.responsiveElem(font-size, 18, 27);
 
