@@ -1,6 +1,35 @@
 @use "base";
-@use "variables" as var;
+@use "abstracts" as var;
+@use "components";
 
 body {
   font-family: var.$font-family;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

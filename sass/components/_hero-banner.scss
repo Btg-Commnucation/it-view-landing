@@ -1,0 +1,29 @@
+@use "../abstracts" as var;
+
+.hero-banner {
+  background: var.$gray;
+  padding-block: 5.5rem;
+}
+
+.hero-banner__content {
+  max-width: 570px;
+}
+
+.separator {
+  background: url("../public/barre_de_couleurs_web.png") no-repeat center;
+  width: 100%;
+  height: 12px;
+  margin-block: 1.5em;
+  margin-inline: auto;
+}
+
+.text-hero {
+  font-weight: 300;
+  margin-left: 0.5em;
+  line-height: 2;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 1s ease-in-out;
+  animation: fadeOut 1.3s ease-in-out forwards;
+  animation-delay: 0.5s;
+}

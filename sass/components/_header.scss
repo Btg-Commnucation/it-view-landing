@@ -1,0 +1,14 @@
+@use "../abstracts" as var;
+
+header {
+  background: white;
+  padding-block: 4rem 2.8rem;
+
+  img {
+    max-width: 299px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+}

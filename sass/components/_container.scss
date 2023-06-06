@@ -1,0 +1,21 @@
+@use "../abstracts" as var;
+
+.container {
+  max-width: 95%;
+  margin-inline: auto;
+
+  @include var.flex(center, center, 2em, column);
+
+  @media screen and (min-width: 650px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 750px) {
+    max-width: min(90%, 1330px);
+  }
+}
+
+.anim-container {
+  overflow: hidden;
+}

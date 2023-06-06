@@ -8,15 +8,9 @@
   gap: $gap;
 }
 
-@mixin responsiveElem(
-  $property,
-  $minSize,
-  $maxSize,
-  $minScreenWidth,
-  $maxScreenWidth
-) {
+@mixin responsiveElem($property, $minSize, $maxSize) {
   #{$property}: calc(
     #{$minSize}px + (#{$maxSize} - #{$minSize}) *
-      ((100vw - #{$minWidth}px) / (#{$maxWidth} - #{$minWidth}))
+      ((100vw - 320px) / (1920 - 320))
   );
 }
