@@ -3,6 +3,7 @@ import { observerHeroBanner } from "./hero-banner.js";
 import { observer } from "./solution.js";
 import { observerContent } from "./content.js";
 import { handleLastType } from "./LastType.js";
+import { observerConfiance } from "./confiance.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   observer.observe(document.querySelector("#observer-solution"));
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   observerHeroBanner.observe(document.querySelector("#hero-banner"));
   observerHeroBanner.observe(document.querySelector("#offres"));
   observerHeroBanner.observe(document.querySelector(".offres-container"));
+  observerConfiance.observe(document.querySelector("#confiance"));
 
   const blocks = document.querySelectorAll(".wp-block-columns");
 

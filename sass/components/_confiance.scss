@@ -1,0 +1,53 @@
+@use "../abstracts" as var;
+
+#confiance {
+  padding-block: 11.4rem 7.8rem;
+  background: white;
+
+  .container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  h2 {
+    font-weight: 300;
+    margin-bottom: 2.1rem;
+  }
+
+  .separator {
+    margin-block: 0;
+  }
+
+  article {
+    max-width: 841px;
+    font-size: 2.8rem;
+    margin-block: 3rem 7.8rem;
+  }
+
+  &.slide-in {
+    h2 {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    article,
+    p {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+  }
+
+  ul {
+    @include var.flex(center, center, 5rem, column);
+
+    @media screen and (min-width: 600px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+      gap: 11.4rem;
+    }
+
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
