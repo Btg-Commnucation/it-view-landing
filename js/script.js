@@ -4,6 +4,7 @@ import { observer } from "./solution.js";
 import { observerContent } from "./content.js";
 import { handleLastType } from "./LastType.js";
 import { observerConfiance } from "./confiance.js";
+import { observerBottom } from "./bottom.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   observer.observe(document.querySelector("#observer-solution"));
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   observerHeroBanner.observe(document.querySelector("#offres"));
   observerHeroBanner.observe(document.querySelector(".offres-container"));
   observerConfiance.observe(document.querySelector("#confiance"));
+  observerBottom.observe(document.querySelector("#bottom"));
 
   const blocks = document.querySelectorAll(".wp-block-columns");
 

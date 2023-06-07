@@ -6,6 +6,7 @@
     <?php get_template_part('./parts/content'); ?>
     <?php get_template_part('./parts/offres'); ?>
     <?php get_template_part('./parts/confiance'); ?>
+    <?php get_template_part('./parts/bottom'); ?>
 </main>
 
 <?php get_footer(); ?>

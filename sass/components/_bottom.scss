@@ -1,0 +1,30 @@
+@use "../abstracts" as var;
+
+#bottom {
+  background: var.$gray;
+  padding-block: 8.7rem 11rem;
+
+  .content {
+    @include var.responsiveElem(font-size, 35, 50);
+    font-weight: 300;
+    max-width: 951px;
+    transform: translateY(100%);
+    opacity: 0;
+
+    strong {
+      color: var.$green;
+    }
+  }
+
+  &.slide-in {
+    .content {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+  }
+
+  @media screen and (min-width: 650px) {
+    .container {
+      justify-content: center;
+    }
+  }
+}
