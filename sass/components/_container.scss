@@ -19,3 +19,10 @@
 .anim-container {
   overflow: hidden;
 }
+
+.large-container {
+  max-width: min(98%, 1805px);
+  margin-inline: auto;
+
+  @include var.flex(center, center, 10.1rem, column);
+}

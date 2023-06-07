@@ -1,0 +1,131 @@
+@use "../abstracts" as var;
+
+#content {
+  padding-block: 7.6rem 5.8rem;
+  background: white;
+  h2 {
+    opacity: 1;
+    transform: translateY(0);
+    @include var.responsiveElem(font-size, 33, 43);
+    font-weight: 300;
+    max-width: 422px;
+    position: relative;
+    line-height: 1.2;
+
+    &::after {
+      content: "";
+      background: url("../public/barre_de_couleurs_web.png") no-repeat center;
+      background-size: contain;
+      position: absolute;
+      bottom: -1em;
+      left: 0.5em;
+      width: 280px;
+      height: 12px;
+
+      @media screen and (min-width: 392px) {
+        left: 1.5em;
+      }
+      @media screen and (min-width: 463px) {
+        left: 0;
+        width: 430px;
+      }
+
+      @media screen and (min-width: 733px) {
+        left: -1.5em;
+        width: 550px;
+      }
+    }
+  }
+
+  .wp-block-columns {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (min-width: 950px) {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      justify-items: center;
+      align-items: center;
+      @include var.responsiveElem(column-gap, 42, 52, 950, 1920);
+
+      @media screen and (min-width: 1495px) {
+        @include var.flex(start, center, 52, row);
+      }
+    }
+
+    &.slide-in {
+      h3,
+      p,
+      ul {
+        animation: fadeIn 1s ease-in-out forwards;
+      }
+    }
+
+    &:nth-of-type(odd) {
+      @media screen and (min-width: 950px) {
+        .wp-block-column:first-of-type {
+          max-width: 740px;
+        }
+        .wp-block-column:last-of-type {
+          max-width: 680px;
+        }
+      }
+    }
+
+    &:nth-of-type(even) {
+      flex-direction: column-reverse;
+
+      @media screen and (min-width: 950px) {
+        grid-template-columns: 0.9fr 1fr;
+
+        .wp-block-column:last-of-type {
+          max-width: 740px;
+        }
+
+        .wp-block-column:first-of-type {
+          align-items: end;
+          max-width: 680px;
+
+          h3,
+          p,
+          ul {
+            text-align: end;
+          }
+        }
+      }
+      @media screen and (min-width: 1495px) {
+        @include var.flex(end, center, 52, row);
+      }
+    }
+  }
+
+  p {
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  h3 {
+    max-width: 423px;
+  }
+
+  ul {
+    list-style: inside;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  .wp-block-column {
+    flex-basis: unset;
+    flex-grow: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}

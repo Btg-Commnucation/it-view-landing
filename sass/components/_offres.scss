@@ -1,0 +1,193 @@
+@use "../abstracts" as var;
+
+#offres {
+  background: var.$gray;
+  padding-block: 7.6rem 5.6rem;
+
+  h2 {
+    font-weight: 300;
+    margin-block: 1.4rem 3.6rem;
+  }
+
+  &.slide-in h2 {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .container {
+    @include var.flex(center, center, 0, column);
+  }
+
+  h3 {
+    transform: translateY(0);
+    opacity: 1;
+    font-weight: 300;
+    margin-bottom: 5.8rem;
+
+    span {
+      font-weight: 700;
+    }
+
+    .ht {
+      font-size: 2.3rem;
+    }
+  }
+
+  .avangates-offre {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400;
+    list-style: none;
+
+    li {
+      margin-left: 0.5em;
+    }
+
+    .not-current-avantage {
+      opacity: 18%;
+      &:not(:last-of-type) {
+        margin-bottom: 1.8rem;
+      }
+    }
+
+    .current-avantage {
+      position: relative;
+
+      &:not(:last-of-type) {
+        margin-bottom: 1.8rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-block: 0;
+        background: url("../public/arrow-check.svg") no-repeat center;
+        background-size: contain;
+        left: -1.5em;
+        width: 24px;
+        height: 20px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 148px;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+      top: -2em;
+      height: 1px;
+      background: var.$green;
+      border-radius: 10px;
+    }
+  }
+
+  .offres-container {
+    @include var.flex(center, center, 5.4rem, column);
+    margin-bottom: 1.6rem;
+
+    &.slide-in .offre {
+      animation: popUp 1.5s ease-in-out forwards;
+    }
+
+    &.slide-in .shadow {
+      animation: shadow 1.5s ease-in-out forwards;
+      animation-delay: 0.65s;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: end;
+    }
+  }
+
+  .shadow {
+    box-shadow: 0 0 0 0 #00000029;
+    border-radius: 12px;
+  }
+
+  .offre {
+    @include var.flex(center, center, 0, column);
+    background: white;
+    padding-block: 3.4rem;
+    @include var.responsiveElem(padding-inline, 25, 58);
+    border-radius: 12px;
+    transform: translateY(100%);
+    opacity: 0;
+
+    &#offre-1 {
+      animation-delay: 0.65s;
+    }
+
+    &#offre-3 {
+      animation-delay: 0.35s;
+    }
+
+    &#offre-2 {
+      background: var.$green;
+      color: white;
+
+      .current-avantage::before {
+        background: url("../public/arrow-check-white.svg") no-repeat center;
+      }
+
+      .last-type {
+        &::after {
+          content: "";
+          width: 148px;
+          margin-inline: auto;
+          height: 1px;
+          background: white;
+          border-radius: 10px;
+          margin-block: 3rem 2.1rem;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .last-type {
+    &::after {
+      content: "";
+      width: 148px;
+      margin-inline: auto;
+      height: 1px;
+      background: var.$green;
+      border-radius: 10px;
+      margin-block: 3rem 2.1rem;
+      display: block;
+    }
+  }
+}
+
+.engagement {
+  align-self: start;
+  font-style: italic;
+  font-size: 2rem;
+  margin-top: 3.4rem;
+}
+
+@keyframes popUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 0 #00000029;
+  }
+  99% {
+    box-shadow: 0 0 0 0 #00000029;
+  }
+  100% {
+    box-shadow: 0 3px 6px 0 #00000029;
+  }
+}
