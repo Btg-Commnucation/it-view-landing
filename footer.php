@@ -10,6 +10,22 @@
             <button class="btn-contact"><?= $texte_header; ?></button>
         </div>
     </div>
+    <section class="mentions">
+        <div class="container">
+            <ul class="link">
+                <li>
+                    <?php $mentions = get_field('mentions_legales', 'option'); ?>
+                    <a href="<?= esc_url($mentions['url']); ?>"><?= esc_html($mentions['title']); ?></a>
+                </li>
+                <li> - </li>
+                <li>
+                    <?php $politique = get_field('politique', 'option'); ?>
+                    <a href="<?= esc_url($mentions['url']); ?>"><?= esc_html($mentions['title']); ?></a>
+                </li>
+            </ul>
+            <p class="realisation">Site réalisé par : <a href="https://www.btg-communication.fr" target="_blank">btg communication</a></p>
+        </div>
+    </section>
 </footer>
 
 </body>
