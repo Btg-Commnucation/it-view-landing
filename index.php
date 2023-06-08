@@ -7,6 +7,7 @@
     <?php get_template_part('./parts/offres'); ?>
     <?php get_template_part('./parts/confiance'); ?>
     <?php get_template_part('./parts/bottom'); ?>
+    <?php get_template_part('./parts/overlay-contact'); ?>
 </main>
 
 <?php get_footer(); ?>

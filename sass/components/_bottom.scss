@@ -7,12 +7,14 @@
   .content {
     @include var.responsiveElem(font-size, 35, 50);
     font-weight: 300;
+    font-family: "Calibri Light";
     max-width: 951px;
     transform: translateY(100%);
     opacity: 0;
 
     strong {
       color: var.$green;
+      font-family: var.$font-family;
     }
   }
 

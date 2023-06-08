@@ -42,3 +42,14 @@
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+@font-face {
+  font-family: "Calibri Light";
+  src: url("../fonts/Calibri-Light.eot"); /* IE9*/
+  src: url("../fonts/Calibri-Light.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Calibri-Light.woff2") format("woff2"),
+    /* chrome、firefox */ url("../fonts/Calibri-Light.woff") format("woff"),
+    /* chrome、firefox */ url("../fonts/Calibri-Light.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("../fonts/Calibri-Light.svg#Calibri Light") format("svg"); /* iOS 4.1- */
+}

@@ -11,7 +11,12 @@
 
   h2 {
     font-weight: 300;
+    font-family: "Calibri Light";
     margin-bottom: 2.1rem;
+
+    strong {
+      font-family: var.$font-family;
+    }
   }
 
   .separator {

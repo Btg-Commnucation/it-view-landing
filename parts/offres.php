@@ -37,7 +37,7 @@
         <?php endif; ?>
         <?php $texte_header = get_field('texte_du_bouton', 'option') ? get_field('texte_du_bouton', 'option') : "Je demande ma démo" ?>
         <div class="anim-container">
-            <button><?= $texte_header; ?></button>
+            <button class="btn-contact"><?= $texte_header; ?></button>
         </div>
     </div>
 </section>

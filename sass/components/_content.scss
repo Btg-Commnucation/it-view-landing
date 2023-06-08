@@ -8,9 +8,14 @@
     transform: translateY(0);
     @include var.responsiveElem(font-size, 33, 43);
     font-weight: 300;
+    font-family: "Calibri Light";
     max-width: 422px;
     position: relative;
     line-height: 1.2;
+
+    strong {
+      font-family: var.$font-family;
+    }
 
     &::after {
       content: "";

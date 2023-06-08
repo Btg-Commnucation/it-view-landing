@@ -19,13 +19,26 @@
 
   .container {
     @media screen and (min-width: 650px) {
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 950px) {
       justify-content: start;
+      flex-direction: row;
       gap: 6.2rem;
     }
   }
 
   h2 {
     font-weight: 300;
+    font-family: "Calibri Light";
+
+    @media screen and (min-width: 950px) {
+      max-width: 400px;
+    }
+    @media screen and (min-width: 1150px) {
+      max-width: 626px;
+    }
   }
 
   .liste {

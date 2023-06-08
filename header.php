@@ -19,7 +19,7 @@
             </div>
             <?php $texte_header = get_field('texte_du_bouton') ? get_field('texte_du_bouton') : "Je demande ma démo" ?>
             <div class="anim-container">
-                <button><?= $texte_header; ?></button>
+                <button class="btn-contact"><?= $texte_header; ?></button>
             </div>
         </div>
     </header>
