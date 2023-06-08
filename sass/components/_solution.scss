@@ -34,10 +34,11 @@
     font-family: "Calibri Light";
     line-height: 1.3;
     @include var.responsiveElem(font-size, 25, 47);
-    @include var.flex(center, start, 0.5em, column);
+    @include var.flex(center, center, 0.5em, column);
 
     @media screen and (min-width: 950px) {
       max-width: 400px;
+      align-items: start;
     }
     @media screen and (min-width: 1150px) {
       max-width: 626px;
