@@ -20,7 +20,7 @@
                 <li> - </li>
                 <li>
                     <?php $politique = get_field('politique', 'option'); ?>
-                    <a href="<?= esc_url($mentions['url']); ?>"><?= esc_html($mentions['title']); ?></a>
+                    <a href="<?= esc_url($politique['url']); ?>"><?= esc_html($politique['title']); ?></a>
                 </li>
             </ul>
             <p class="realisation">Site réalisé par : <a href="https://www.btg-communication.fr" target="_blank">btg communication</a></p>
