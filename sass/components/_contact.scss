@@ -9,6 +9,12 @@
   z-index: 100;
   overflow: auto;
   display: none;
+  scrollbar-width: none !important;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+  }
 
   .container {
     position: absolute;
