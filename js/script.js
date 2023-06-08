@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observerFromHeader = document.querySelector("header");
   if (observerFromHeader) {
-    observerHeader.observe(document.querySelector(observerFromHeader));
+    observerHeader.observe(observerFromHeader);
   }
 
   observerHeroBanner.observe(document.querySelector("#hero-banner"));
