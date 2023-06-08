@@ -9,22 +9,22 @@ import { observerFooter } from "./footer.js";
 import { contactSent } from "./contactSent.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // const observerSolution = document.querySelector("#observer-solution");
-  // if (observerSolution) {
-  //   observer.observe(observerSolution);
-  // }
+  const observerSolution = document.querySelector("#observer-solution");
+  if (observerSolution) {
+    observer.observe(observerSolution);
+  }
 
-  // const observerFromHeader = document.querySelector("header");
-  // if (observerFromHeader) {
-  //   observerHeader.observe(observerFromHeader);
-  // }
+  const observerFromHeader = document.querySelector("header");
+  if (observerFromHeader) {
+    observerHeader.observe(observerFromHeader);
+  }
 
-  // observerHeroBanner.observe(document.querySelector("#hero-banner"));
-  // observerHeroBanner.observe(document.querySelector("#offres"));
-  // observerHeroBanner.observe(document.querySelector(".offres-container"));
-  // observerConfiance.observe(document.querySelector("#confiance"));
-  // observerBottom.observe(document.querySelector("#bottom"));
-  // observerFooter.observe(document.querySelector("footer"));
+  observerHeroBanner.observe(document.querySelector("#hero-banner"));
+  observerHeroBanner.observe(document.querySelector("#offres"));
+  observerHeroBanner.observe(document.querySelector(".offres-container"));
+  observerConfiance.observe(document.querySelector("#confiance"));
+  observerBottom.observe(document.querySelector("#bottom"));
+  observerFooter.observe(document.querySelector("footer"));
 
   const blocks = document.querySelectorAll(".wp-block-columns");
 
