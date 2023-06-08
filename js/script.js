@@ -9,7 +9,7 @@ import { observerFooter } from "./footer.js";
 import { contactSent } from "./contactSent.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  observer.observe(document.querySelector("#observer-solution"));
+  // observer.observe(document.querySelector("#observer-solution"));
   observerHeader.observe(document.querySelector("header"));
   observerHeroBanner.observe(document.querySelector("#hero-banner"));
   observerHeroBanner.observe(document.querySelector("#offres"));
