@@ -19,18 +19,44 @@ document.addEventListener("DOMContentLoaded", () => {
     observerHeader.observe(observerFromHeader);
   }
 
-  observerHeroBanner.observe(document.querySelector("#hero-banner"));
-  observerHeroBanner.observe(document.querySelector("#offres"));
-  observerHeroBanner.observe(document.querySelector(".offres-container"));
-  observerConfiance.observe(document.querySelector("#confiance"));
-  observerBottom.observe(document.querySelector("#bottom"));
-  observerFooter.observe(document.querySelector("footer"));
+  const heroBanner = document.querySelector("#hero-banner");
+
+  if (heroBanner) {
+    observerHeroBanner.observe(heroBanner);
+  }
+
+  const offres = document.querySelector("#offres");
+  if (offres) {
+    observerHeroBanner.observe(offres);
+  }
+
+  const offresContainer = document.querySelector(".offres-container");
+  if (offresContainer) {
+    observerHeroBanner.observe(offresContainer);
+  }
+
+  const confiance = document.querySelector("#confiance");
+  if (confiance) {
+    observerConfiance.observe(confiance);
+  }
+
+  const bottom = document.querySelector("#bottom");
+  if (bottom) {
+    observerBottom.observe(bottom);
+  }
+
+  const footer = document.querySelector("footer");
+  if (footer) {
+    observerFooter.observe(footer);
+  }
 
   const blocks = document.querySelectorAll(".wp-block-columns");
 
-  blocks.forEach((block) => {
-    observerContent.observe(block);
-  });
+  if (blocks) {
+    blocks.forEach((block) => {
+      observerContent.observe(block);
+    });
+  }
 
   const offreUn = document.getElementById("offre-1");
   const offreDeux = document.getElementById("offre-2");
@@ -43,12 +69,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const avantageCinq = offreTrois.children[1].querySelectorAll(".avantage-1");
   const avantageSix = offreTrois.children[1].querySelectorAll(".avantage-2");
 
-  handleLastType(avantageUn);
-  handleLastType(avantageDeux);
-  handleLastType(avantageTrois);
-  handleLastType(avantageQuatre);
-  handleLastType(avantageCinq);
-  handleLastType(avantageSix);
+  if (avantageUn) {
+    handleLastType(avantageUn);
+  }
+
+  if (avantageDeux) {
+    handleLastType(avantageDeux);
+  }
+
+  if (avantageTrois) {
+    handleLastType(avantageTrois);
+  }
+
+  if (avantageQuatre) {
+    handleLastType(avantageQuatre);
+  }
+
+  if (avantageCinq) {
+    handleLastType(avantageCinq);
+  }
+
+  if (avantageSix) {
+    handleLastType(avantageSix);
+  }
 
   const btnContact = document.querySelectorAll(".btn-contact");
   const contact = document.getElementById("contact");
@@ -56,33 +99,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const formContainer = document.querySelector("#contact > .container");
   const form = document.querySelector("form");
 
-  form.addEventListener("submit", (e) => {
-    setTimeout(() => {
-      if (e.target.dataset.status === "sent") {
-        contactSent(formContainer);
-      }
-    }, 300);
-  });
-
-  btnContact.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      contact.style.display = "flex";
-      document.body.style.overflow = "hidden";
-      document.body.classLisT.add("no-scroll");
+  if (btnContact && contact && closeContact && formContainer && form) {
+    form.addEventListener("submit", (e) => {
+      setTimeout(() => {
+        if (e.target.dataset.status === "sent") {
+          contactSent(formContainer);
+        }
+      }, 300);
     });
-  });
 
-  closeContact.addEventListener("click", () => {
-    contact.style.display = "none";
-    document.body.style.overflow = "scroll";
-    document.body.classLisT.remove("no-scroll");
-  });
+    btnContact.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        contact.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        document.body.classLisT.add("no-scroll");
+      });
+    });
 
-  contact.addEventListener("click", (e) => {
-    if (e.target === contact) {
+    closeContact.addEventListener("click", () => {
       contact.style.display = "none";
       document.body.style.overflow = "scroll";
       document.body.classLisT.remove("no-scroll");
-    }
-  });
+    });
+
+    contact.addEventListener("click", (e) => {
+      if (e.target === contact) {
+        contact.style.display = "none";
+        document.body.style.overflow = "scroll";
+        document.body.classLisT.remove("no-scroll");
+      }
+    });
+  }
 });
