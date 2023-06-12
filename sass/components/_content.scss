@@ -25,7 +25,7 @@
       background-size: contain;
       position: absolute;
       bottom: -1em;
-      left: 0.5em;
+      left: 1.5em;
       width: 280px;
       height: 12px;
 
@@ -38,7 +38,7 @@
       }
 
       @media screen and (min-width: 733px) {
-        left: -1.5em;
+        left: -2.5em;
         width: 650px;
         background-size: cover;
       }
