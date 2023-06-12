@@ -3,6 +3,11 @@
 #content {
   padding-block: 7.6rem 5.8rem;
   background: white;
+
+  .large-container {
+    gap: 14rem;
+  }
+
   h2 {
     opacity: 1;
     transform: translateY(0);
