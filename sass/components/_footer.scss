@@ -9,6 +9,7 @@ footer {
     max-width: 406px;
     line-height: 1.2;
     margin-bottom: 0;
+    text-align: center;
   }
 
   &.slide-in h3 {
@@ -21,9 +22,9 @@ footer {
   }
 
   button {
-    color: white;
-    background: var.$yellow;
-    border: 1px solid var.$yellow;
+    color: var.$green;
+    background: white;
+    border: 1px solid white;
 
     &:hover {
       background: transparent;

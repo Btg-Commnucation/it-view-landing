@@ -7,7 +7,6 @@
                         <?php while (have_rows('titre_haut_de_page')) : the_row();
                             if (get_sub_field('noir')) : ?>
                                 <span><?php the_sub_field('noir'); ?></span>
-                                <br />
                             <?php endif; ?>
                             <?php if (get_sub_field('vert')) : ?>
                                 <span class="green"><?php the_sub_field('vert'); ?></span>
