@@ -42,6 +42,7 @@
 
   ul {
     @include var.flex(center, center, 5rem, column);
+    margin-top: 3em;
 
     @media screen and (min-width: 600px) {
       display: grid;
