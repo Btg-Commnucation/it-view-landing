@@ -4,11 +4,6 @@
             <h2><?php the_field('titre_confiance'); ?></h2>
         </div>
         <div class="separator"></div>
-        <div class="anim-container">
-            <article>
-                <?php the_field('texte_sous_titre') ?>
-            </article>
-        </div>
         <?php if (have_rows('partenaire')) : ?>
             <ul class="partenaire">
                 <?php while (have_rows('partenaire')) : the_row(); ?>
