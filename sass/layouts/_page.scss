@@ -1,0 +1,12 @@
+@use "../abstracts" as var;
+
+header#page-header {
+  .container {
+    @include var.flex(center center, 0, column);
+  }
+}
+
+#page {
+  background: var.$gray;
+  padding-block: 5.3rem 2.5rem;
+}

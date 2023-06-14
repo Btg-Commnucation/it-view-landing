@@ -1,6 +1,7 @@
 @use "base";
 @use "abstracts" as var;
 @use "components";
+@use "layouts";
 
 body {
   font-family: var.$font-family;
