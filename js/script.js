@@ -153,12 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 500);
     });
 
-    btnAccount.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        account.style.display = "flex";
-        document.body.style.overflow = "hidden";
-        document.body.classList.add("no-scroll");
-      });
+    btnAccount.addEventListener("click", () => {
+      account.style.display = "flex";
+      document.body.style.overflow = "hidden";
+      document.body.classList.add("no-scroll");
     });
 
     closeContact.addEventListener("click", () => {
