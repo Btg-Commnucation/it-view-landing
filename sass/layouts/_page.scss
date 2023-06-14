@@ -9,4 +9,28 @@ header#page-header {
 #page {
   background: var.$gray;
   padding-block: 5.3rem 2.5rem;
+  @include var.flex(center, center, 0, column);
+
+  #content {
+    background: transparent;
+  }
+
+  h2 {
+    &::before,
+    &::after {
+      display: none !important;
+    }
+  }
+
+  h2,
+  h3,
+  p,
+  ul,
+  li,
+  a,
+  span,
+  div {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
