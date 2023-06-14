@@ -2,7 +2,7 @@
 
 header#page-header {
   .container {
-    @include var.flex(center center, 0, column);
+    @include var.flex(center, center, 0, column);
   }
 }
 
@@ -13,9 +13,30 @@ header#page-header {
 
   #content {
     background: transparent;
+
+    .larger-container {
+      align-items: center;
+      gap: 0;
+      max-width: min(98%, 1330px);
+    }
+  }
+
+  h3 {
+    max-width: 100%;
+    margin-block: 1em 0.2em;
   }
 
   h2 {
+    width: 100%;
+    font-family: "Calibri Light";
+    font-weight: 700;
+    max-width: 100%;
+    margin-bottom: 1em;
+    strong {
+      font-weight: 700;
+      font-family: var.$font-family;
+    }
+
     &::before,
     &::after {
       display: none !important;
