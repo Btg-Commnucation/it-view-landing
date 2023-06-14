@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const formContainer = document.querySelector("#contact > .container");
   const form = document.querySelector("form");
   const account = document.getElementById("account");
+  const closeAccount = document.getElementById("close-account");
   const btnAccount = document.querySelector(".btn-account");
 
   if (btnContact && contact && closeContact && formContainer && form) {
@@ -159,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("no-scroll");
     });
 
-    closeContact.addEventListener("click", () => {
+    closeAccount.addEventListener("click", () => {
       account.style.display = "none";
       document.body.style.overflow = "scroll";
       document.body.classList.remove("no-scroll");
