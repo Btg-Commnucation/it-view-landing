@@ -105,10 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnContact && contact && closeContact && formContainer && form) {
     form.addEventListener("submit", (e) => {
       setTimeout(() => {
+        console.log(e.target.dataset.status);
         if (e.target.dataset.status === "sent") {
           contactSent(formContainer);
         }
-      }, 300);
+      }, 500);
     });
 
     btnContact.forEach((btn) => {
