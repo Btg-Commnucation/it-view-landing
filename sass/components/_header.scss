@@ -9,6 +9,8 @@ header {
     transform: translateY(100%);
     opacity: 0;
     transition: 1s ease-in-out;
+    min-width: 299px;
+    height: 62px;
   }
 
   &.slide-in {
