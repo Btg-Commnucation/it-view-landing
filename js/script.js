@@ -101,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeContact = document.getElementById("close-contact");
   const formContainer = document.querySelector("#contact > .container");
   const form = document.querySelector("form");
+  const account = document.getElementById("account");
+  const btnAccount = document.querySelector(".btn-account");
 
   if (btnContact && contact && closeContact && formContainer && form) {
     form.addEventListener("submit", (e) => {
@@ -137,4 +139,41 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+});
+
+if (btnAccount && account && closeContact && formContainer && form) {
+  form.addEventListener("submit", (e) => {
+    setTimeout(() => {
+      console.log(e.target.dataset.status);
+      if (
+        e.target.dataset.status === "sent" ||
+        e.target.dataset.status === "resetting"
+      ) {
+        contactSent(formContainer);
+      }
+    }, 500);
+  });
+
+  btnAccount.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      account.style.display = "flex";
+      document.body.style.overflow = "hidden";
+      document.body.classList.add("no-scroll");
+    });
+  });
+
+  closeContact.addEventListener("click", () => {
+    account.style.display = "none";
+    document.body.style.overflow = "scroll";
+    document.body.classList.remove("no-scroll");
+  });
+
+  account.addEventListener("click", (e) => {
+    if (e.target === contact) {
+      account.style.display = "none";
+      document.body.style.overflow = "scroll";
+      document.body.classList.remove("no-scroll");
+    }
+  });
+}
 });

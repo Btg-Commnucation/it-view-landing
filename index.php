@@ -8,6 +8,7 @@
     <?php get_template_part('./parts/confiance'); ?>
     <?php get_template_part('./parts/bottom'); ?>
     <?php get_template_part('./parts/overlay-contact'); ?>
+    <?php get_template_part('./parts/overlay-account'); ?>
 </main>
 
 <?php get_footer(); ?>

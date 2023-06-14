@@ -17,9 +17,9 @@
             <div class="anim-container">
                 <img src="<?= $logo ? esc_url($logo['url']) : './public/logo-it-oneview.svg' ?>" alt="<?= $logo ? esc_attr($logo['alt']) : "IT-OneView, continuous improvement"; ?>" />
             </div>
-            <?php $texte_header = get_field('texte_du_bouton') ? get_field('texte_du_bouton') : "Je demande ma démo" ?>
+            <?php $texte_header = get_field('creation_de_compte', 'option') ? get_field('creation_de_compte', 'option') : "Créer un compte" ?>
             <div class="anim-container">
-                <button class="btn-contact"><?= $texte_header; ?></button>
+                <button class="btn-account"><?= $texte_header; ?></button>
             </div>
         </div>
     </header>
