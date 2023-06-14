@@ -15,7 +15,9 @@
         <div class="container">
             <?php $logo = get_field('logo', 'options'); ?>
             <div class="anim-container">
-                <img src="<?= $logo ? esc_url($logo['url']) : './public/logo-it-oneview.svg' ?>" alt="<?= $logo ? esc_attr($logo['alt']) : "IT-OneView, continuous improvement"; ?>" />
+                <a href="<?= home_url('/') ?>">
+                    <img src="<?= $logo ? esc_url($logo['url']) : './public/logo-it-oneview.svg' ?>" alt="<?= $logo ? esc_attr($logo['alt']) : "IT-OneView, continuous improvement"; ?>" />
+                </a>
             </div>
         </div>
     </header>
