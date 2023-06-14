@@ -25,6 +25,8 @@ header#page-header {
     max-width: 100%;
     margin-block: 1em 0.2em;
     @include var.responsiveElem(font-size, 23, 43);
+    font-family: "Calibri Light";
+    font-weight: 300;
   }
 
   p {
