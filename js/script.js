@@ -115,21 +115,21 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => {
         contact.style.display = "flex";
         document.body.style.overflow = "hidden";
-        document.body.classLisT.add("no-scroll");
+        document.body.classList.add("no-scroll");
       });
     });
 
     closeContact.addEventListener("click", () => {
       contact.style.display = "none";
       document.body.style.overflow = "scroll";
-      document.body.classLisT.remove("no-scroll");
+      document.body.classList.remove("no-scroll");
     });
 
     contact.addEventListener("click", (e) => {
       if (e.target === contact) {
         contact.style.display = "none";
         document.body.style.overflow = "scroll";
-        document.body.classLisT.remove("no-scroll");
+        document.body.classList.remove("no-scroll");
       }
     });
   }
