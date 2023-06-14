@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     account.addEventListener("click", (e) => {
-      if (e.target === contact) {
+      if (e.target === account) {
         account.style.display = "none";
         document.body.style.overflow = "scroll";
         document.body.classList.remove("no-scroll");
