@@ -24,6 +24,11 @@ header#page-header {
   h3 {
     max-width: 100%;
     margin-block: 1em 0.2em;
+    @include var.responsiveElem(font-size, 23, 43);
+  }
+
+  p {
+    @include var.responsiveElem(font-size, 18, 20);
   }
 
   h2 {
@@ -32,6 +37,8 @@ header#page-header {
     font-weight: 700;
     max-width: 100%;
     margin-bottom: 1em;
+    @include var.responsiveElem(font-size, 30, 70);
+
     strong {
       font-weight: 700;
       font-family: var.$font-family;
