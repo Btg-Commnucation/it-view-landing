@@ -106,7 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
       setTimeout(() => {
         console.log(e.target.dataset.status);
-        if (e.target.dataset.status === "sent") {
+        if (
+          e.target.dataset.status === "sent" ||
+          e.target.dataset.status === "resetting"
+        ) {
           contactSent(formContainer);
         }
       }, 500);
