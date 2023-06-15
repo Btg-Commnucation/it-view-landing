@@ -101,22 +101,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const contact = document.getElementById("contact");
   const closeContact = document.getElementById("close-contact");
   const formContainer = document.querySelector("#contact > .container");
-  const form = document.querySelector("form");
+  const forms = document.querySelectorAll("form");
   const account = document.getElementById("account");
   const closeAccount = document.getElementById("close-account");
   const btnAccount = document.querySelector(".btn-account");
 
-  if (btnContact && contact && closeContact && formContainer && form) {
-    form.addEventListener("submit", (e) => {
-      setTimeout(() => {
-        console.log(e.target.dataset.status);
-        if (
-          e.target.dataset.status === "sent" ||
-          e.target.dataset.status === "resetting"
-        ) {
-          contactSent(formContainer);
-        }
-      }, 500);
+  if (btnContact && contact && closeContact && formContainer && forms) {
+    forms.forEach((form) => {
+      form.addEventListener("submit", (e) => {
+        setTimeout(() => {
+          console.log(e.target.dataset.status);
+          if (
+            e.target.dataset.status === "sent" ||
+            e.target.dataset.status === "resetting"
+          ) {
+            contactSent(formContainer);
+          }
+        }, 500);
+      });
     });
 
     btnContact.forEach((btn) => {
@@ -142,17 +144,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (btnAccount && account && closeContact && formContainer && form) {
-    form.addEventListener("submit", (e) => {
-      setTimeout(() => {
-        console.log(e.target.dataset.status);
-        if (
-          e.target.dataset.status === "sent" ||
-          e.target.dataset.status === "resetting"
-        ) {
-          accountSent(formContainer);
-        }
-      }, 300);
+  if (btnAccount && account && closeContact && formContainer && forms) {
+    forms.forEach((form) => {
+      form.addEventListener("submit", (e) => {
+        setTimeout(() => {
+          console.log(e.target.dataset.status);
+          if (
+            e.target.dataset.status === "sent" ||
+            e.target.dataset.status === "resetting"
+          ) {
+            accountSent(formContainer);
+          }
+        }, 300);
+      });
     });
 
     btnAccount.addEventListener("click", () => {
