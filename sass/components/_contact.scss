@@ -12,6 +12,15 @@
   display: none;
 
   .wpcf7-form-control-wrap {
+    label {
+      flex-direction: row !important;
+
+      input {
+        width: fit-content !important;
+        margin-left: 2em;
+      }
+    }
+
     .wpcf7-list-item {
       margin-left: 0 !important;
     }
