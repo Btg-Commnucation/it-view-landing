@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnContact = document.querySelectorAll(".btn-contact");
   const contact = document.getElementById("contact");
-  const closeContact = document.querySelectorAll("close-contact");
+  const closeContact = document.getElementById("close-contact");
   const formContainer = document.querySelector("#contact > .container");
   const form = document.querySelector(
     "#contact > .container > .form-container > .form > .wpcf7 > form"
@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#account > .container > .form-container > .form > .wpcf7 > form"
   );
   const account = document.getElementById("account");
+  const closeAccount = document.getElementById("close-account");
   const btnAccount = document.querySelector(".btn-account");
   const accountContainer = document.querySelector("#account > .container");
 
@@ -132,12 +133,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    closeContact.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        contact.style.display = "none";
-        document.body.style.overflow = "scroll";
-        document.body.classList.remove("no-scroll");
-      });
+    closeContact.addEventListener("click", () => {
+      contact.style.display = "none";
+      document.body.style.overflow = "scroll";
+      document.body.classList.remove("no-scroll");
     });
 
     contact.addEventListener("click", (e) => {
@@ -167,12 +166,10 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("no-scroll");
     });
 
-    closeContact.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        account.style.display = "none";
-        document.body.style.overflow = "scroll";
-        document.body.classList.remove("no-scroll");
-      });
+    closeAccount.addEventListener("click", () => {
+      account.style.display = "none";
+      document.body.style.overflow = "scroll";
+      document.body.classList.remove("no-scroll");
     });
 
     account.addEventListener("click", (e) => {
