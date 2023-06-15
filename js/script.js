@@ -145,13 +145,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnAccount && account && closeContact && formContainer && form) {
     form.addEventListener("submit", (e) => {
       setTimeout(() => {
+        console.log(e.target.dataset.status);
         if (
           e.target.dataset.status === "sent" ||
           e.target.dataset.status === "resetting"
         ) {
           accountSent(formContainer);
         }
-      }, 500);
+      }, 300);
     });
 
     btnAccount.addEventListener("click", () => {
