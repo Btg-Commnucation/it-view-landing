@@ -1,7 +1,7 @@
 <section id="account">
     <div class="container">
         <div class="hero-banner">
-            <h3>Je créer mon compte</h3>
+            <h3>Je crée mon compte</h3>
             <img src="<?= get_template_directory_uri(); ?>/public/close-it-contact.svg" alt="Fermer le fenêtre de contact" id="close-account">
         </div>
         <div class="form-container">
