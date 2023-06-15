@@ -7,6 +7,7 @@ import { observerConfiance } from "./confiance.js";
 import { observerBottom } from "./bottom.js";
 import { observerFooter } from "./footer.js";
 import { contactSent } from "./contactSent.js";
+import { accountSent } from "./accountSent.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const observerSolution = document.querySelector("#observer-solution");
@@ -144,12 +145,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnAccount && account && closeContact && formContainer && form) {
     form.addEventListener("submit", (e) => {
       setTimeout(() => {
-        console.log(e.target.dataset.status);
         if (
           e.target.dataset.status === "sent" ||
           e.target.dataset.status === "resetting"
         ) {
-          contactSent(formContainer);
+          accountSent(formContainer);
         }
       }, 500);
     });
