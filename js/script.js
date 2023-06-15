@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ) {
           accountSent(accountContainer);
         }
-      }, 300);
+      }, 500);
     });
 
     btnAccount.addEventListener("click", () => {
