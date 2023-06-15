@@ -101,8 +101,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const contact = document.getElementById("contact");
   const closeContact = document.getElementById("close-contact");
   const formContainer = document.querySelector("#contact > .container");
-  const form = document.querySelector("#contact > form");
-  const accountForm = document.querySelector("#account > form");
+  const form = document.querySelector(
+    "#contact > .container > form-container > .form > .wpcf7 > form"
+  );
+  const accountForm = document.querySelector(
+    "#account > .container > form-container > .form > .wpcf7 > form"
+  );
   const account = document.getElementById("account");
   const closeAccount = document.getElementById("close-account");
   const btnAccount = document.querySelector(".btn-account");
@@ -144,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (btnAccount && account && closeContact && formContainer && form) {
+  if (btnAccount && account && closeContact && formContainer && accountForm) {
     accountForm.addEventListener("submit", (e) => {
       setTimeout(() => {
         console.log(e.target.dataset.status);
