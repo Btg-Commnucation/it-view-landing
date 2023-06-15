@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnAccount = document.querySelector(".btn-account");
   const accountContainer = document.querySelector("#account > .container");
 
-  if (btnContact && contact && closeContact && formContainer && forms) {
+  if (btnContact && contact && closeContact && formContainer && form) {
     form.addEventListener("submit", (e) => {
       setTimeout(() => {
         console.log(e.target.dataset.status);
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (btnAccount && account && closeContact && formContainer && forms) {
+  if (btnAccount && account && closeContact && formContainer && form) {
     accountForm.addEventListener("submit", (e) => {
       setTimeout(() => {
         console.log(e.target.dataset.status);
