@@ -2,7 +2,7 @@
     <div class="container">
         <div class="hero-banner">
             <h3>Je crée mon compte</h3>
-            <img src="<?= get_template_directory_uri(); ?>/public/close-it-contact.svg" alt="Fermer le fenêtre de contact" id="close-account">
+            <img src="<?= get_template_directory_uri(); ?>/public/close-it-contact.svg" alt="Fermer le fenêtre de contact" id="close-account" class="close-contact">
         </div>
         <div class="form-container">
             <img src="<?php echo get_template_directory_uri(); ?>/public/keylock.svg" alt="la lettre O de IT-OneView">

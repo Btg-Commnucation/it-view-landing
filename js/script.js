@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#account > .container > .form-container > .form > .wpcf7 > form"
   );
   const account = document.getElementById("account");
-  const closeAccount = document.getElementById("close-account");
+  const closeAccount = document.getElementquerySelectorAll(".close-account");
   const btnAccount = document.querySelector(".btn-account");
   const accountContainer = document.querySelector("#account > .container");
 
@@ -133,10 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    closeContact.addEventListener("click", () => {
-      contact.style.display = "none";
-      document.body.style.overflow = "scroll";
-      document.body.classList.remove("no-scroll");
+    closeContact.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        contact.style.display = "none";
+        document.body.style.overflow = "scroll";
+        document.body.classList.remove("no-scroll");
+      });
     });
 
     contact.addEventListener("click", (e) => {
@@ -166,10 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("no-scroll");
     });
 
-    closeAccount.addEventListener("click", () => {
-      account.style.display = "none";
-      document.body.style.overflow = "scroll";
-      document.body.classList.remove("no-scroll");
+    closeContact.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        account.style.display = "none";
+        document.body.style.overflow = "scroll";
+        document.body.classList.remove("no-scroll");
+      });
     });
 
     account.addEventListener("click", (e) => {
