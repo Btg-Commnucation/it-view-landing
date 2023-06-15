@@ -6,7 +6,7 @@ const contactSent = (formContainer) => {
 </div>
 <div class="form-container">
     <img src="../wp-content/themes/it-theme/public/keylock.svg" alt="la lettre O de IT-OneView">
-    <p>Nous avons bien reçu votre demande de démo.<br />Notre équipe va prendre contact avec vous dans les meileurs délais.</p>
+    <p>L’équipe IT-OneView vous remercie pour la demande de démo.<br /> Nous prendrons rapidement contact avec vous&nbsp;😊</p>
 </div>`;
 };
 
