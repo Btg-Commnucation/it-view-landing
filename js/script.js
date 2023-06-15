@@ -111,12 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeAccount = document.getElementById("close-account");
   const btnAccount = document.querySelector(".btn-account");
   const accountContainer = document.querySelector("#account > .container");
-  const closeAccountConfirmation = document.getElementById(
-    "close-account-confirmation"
-  );
-  const closeContactConfirmation = document.getElementById(
-    "close-contact-confirmation"
-  );
 
   if (btnContact && contact && closeContact && formContainer && form) {
     form.addEventListener("submit", (e) => {
@@ -144,14 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "scroll";
       document.body.classList.remove("no-scroll");
     });
-
-    if (closeContactConfirmation) {
-      closeContactConfirmation.addEventListener("click", () => {
-        contact.style.display = "none";
-        document.body.style.overflow = "scroll";
-        document.body.classList.remove("no-scroll");
-      });
-    }
 
     contact.addEventListener("click", (e) => {
       if (e.target === contact) {
@@ -185,14 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "scroll";
       document.body.classList.remove("no-scroll");
     });
-
-    if (closeAccountConfirmation) {
-      closeAccountConfirmation.addEventListener("click", () => {
-        account.style.display = "none";
-        document.body.style.overflow = "scroll";
-        document.body.classList.remove("no-scroll");
-      });
-    }
 
     account.addEventListener("click", (e) => {
       if (e.target === account) {
