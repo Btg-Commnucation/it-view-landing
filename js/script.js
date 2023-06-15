@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const account = document.getElementById("account");
   const closeAccount = document.getElementById("close-account");
   const btnAccount = document.querySelector(".btn-account");
+  const accountContainer = document.querySelector("#account > .container");
 
   if (btnContact && contact && closeContact && formContainer && forms) {
     forms.forEach((form) => {
@@ -153,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.dataset.status === "sent" ||
             e.target.dataset.status === "resetting"
           ) {
-            accountSent(formContainer);
+            accountSent(accountContainer);
           }
         }, 300);
       });
