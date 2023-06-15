@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnContact = document.querySelectorAll(".btn-contact");
   const contact = document.getElementById("contact");
-  const closeContact = document.getElementById("close-contact");
+  const closeContact = document.querySelectorAll("close-contact");
   const formContainer = document.querySelector("#contact > .container");
   const form = document.querySelector(
     "#contact > .container > .form-container > .form > .wpcf7 > form"
@@ -108,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "#account > .container > .form-container > .form > .wpcf7 > form"
   );
   const account = document.getElementById("account");
-  const closeAccount = document.getElementquerySelectorAll(".close-account");
   const btnAccount = document.querySelector(".btn-account");
   const accountContainer = document.querySelector("#account > .container");
 
