@@ -1,5 +1,4 @@
 const accountSent = (formContainer) => {
-  console.log("accountSent" + formContainer);
   formContainer.innerHTML = `
       <div class="hero-banner">
       <h3>Merci</h3>
