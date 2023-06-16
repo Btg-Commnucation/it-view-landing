@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
           e.target.dataset.status === "sent" ||
           e.target.dataset.status === "resetting"
         ) {
-          contactSent(formContainer);
+          contactSent(formContainer, contact);
         }
       }, 500);
     });
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
           e.target.dataset.status === "sent" ||
           e.target.dataset.status === "resetting"
         ) {
-          accountSent(accountContainer);
+          accountSent(accountContainer, account);
         }
       }, 500);
     });
