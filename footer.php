@@ -17,8 +17,12 @@
                     <?php $mentions = get_field('mentions_legales', 'option'); ?>
                     <a href="<?= esc_url($mentions['url']); ?>"><?= esc_html($mentions['title']); ?></a>
                 </li>
+                <li> - </li>
+                <li> Adresse mail : <a href="mailto:contact@it-oneview.com">contact@it-oneview.com</a></li>
+                <li> - </li>
+                <li>Téléphone : <a href="tel:0183641217"">01 83 64 12 17</a></li>
             </ul>
-            <p class="realisation">Site réalisé par : <a href="https://www.btg-communication.fr" target="_blank">btg communication</a></p>
+            <p class=" realisation">Site réalisé par : <a href="https://www.btg-communication.fr" target="_blank">btg communication</a></p>
         </div>
     </section>
 </footer>
